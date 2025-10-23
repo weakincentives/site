@@ -2,4 +2,4 @@ name = "weakincentives"
 compatibility_date = "2025-10-23"
 
 [assets]
-directory = "."
+directory = "./public"
