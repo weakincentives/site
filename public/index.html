@@ -13,7 +13,7 @@
 
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-            background: #0a0a0a;
+            background: #1a1a1a;
             color: #ffffff;
             min-height: 100vh;
             display: flex;
@@ -24,17 +24,13 @@
         }
 
         .github-link {
-            position: fixed;
-            top: 2rem;
-            right: 2rem;
-            color: #888888;
+            color: #d4a500;
             text-decoration: none;
-            font-size: 0.9rem;
             transition: color 0.2s ease;
         }
 
         .github-link:hover {
-            color: #ffffff;
+            color: #f0c040;
         }
 
         .container {
@@ -53,8 +49,17 @@
             background-clip: text;
         }
 
+        .logo {
+            width: clamp(80px, 15vw, 120px);
+            height: auto;
+            margin-bottom: 2rem;
+            background: #ffffff;
+            padding: 1rem;
+            border-radius: 8px;
+        }
+
         p {
-            font-size: clamp(1.125rem, 2.5vw, 1.5rem);
+            font-size: clamp(1.25rem, 2.5vw, 1.625rem);
             color: #888888;
             line-height: 1.6;
             max-width: 700px;
@@ -63,10 +68,10 @@
     </style>
 </head>
 <body>
-    <a href="https://github.com/weakincentives" class="github-link" target="_blank" rel="noopener noreferrer">GitHub →</a>
     <div class="container">
+        <img src="logo.png" alt="Weak Incentives Logo" class="logo">
         <h1>Weak Incentives Is All You Need</h1>
-        <p>Open source tools for developing and optimizing side effect free background agents</p>
+        <p>Open source tools for developing and optimizing side-effect-free background agents (e.g. coding agents) · <a href="https://github.com/weakincentives" class="github-link" target="_blank" rel="noopener noreferrer">GitHub →</a></p>
     </div>
 </body>
 </html>

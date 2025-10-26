@@ -9,7 +9,8 @@ This is a static landing page for Weak Incentives, an open source project focuse
 ## Repository Structure
 
 This is a minimal static site repository with:
-- `index.html` - Single page with embedded CSS
+- `public/index.html` - Single page with embedded CSS
+- `wrangler.toml` - Cloudflare Workers deployment configuration
 - `LICENSE` - Apache License 2.0
 - No package manager, build tools, or dependencies
 
@@ -19,17 +20,21 @@ Since this is a static HTML site with no dependencies:
 
 **Preview the site:**
 ```bash
-# Using Python's built-in server
-python3 -m http.server 8000
+# Using Python's built-in server (from project root)
+python3 -m http.server 8000 -d public
 
 # Or using PHP
-php -S localhost:8000
+php -S localhost:8000 -t public
 ```
 
 Then open http://localhost:8000 in your browser.
 
-**Deploy:**
-This site is designed to be deployed to any static hosting service (GitHub Pages, Netlify, Vercel, etc.) by serving the `index.html` file directly.
+**Deploy to Cloudflare Workers:**
+```bash
+npx wrangler deploy
+```
+
+The site is configured to deploy the `public/` directory via `wrangler.toml`.
 
 ## Architecture
 
@@ -42,7 +47,7 @@ This is a single-page static website with:
 
 ## Code Style
 
-When modifying `index.html`:
+When modifying `public/index.html`:
 - Maintain the minimalist aesthetic with dark background and gradient text
 - Use system font stack for performance
 - Keep responsive design using clamp() and viewport units
